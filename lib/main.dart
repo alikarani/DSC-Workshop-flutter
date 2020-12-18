@@ -31,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String title;
   String text;
   List _todos = [];
+
   addTodo() {
     List tempTodos = _todos;
     tempTodos.add({'title': text});
@@ -41,13 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   deleteTodo(index) {
-List tempTodos = _todos;
+    List tempTodos = _todos;
     tempTodos.removeAt(index);
     setState(() {
       _todos = tempTodos;
     });
     print(tempTodos);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +101,7 @@ List tempTodos = _todos;
                     }),
               ),
             ),
-            Text('wow')
+            Text('Made by Ali Karani')
           ],
         ),
       ),
